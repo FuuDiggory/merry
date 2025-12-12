@@ -171,7 +171,7 @@ h4 {
 }
 
 .card:hover {
-    transform: translate(-50%, -50%) perspective(2000px) rotate(15deg) scale(1.2);
+    transform: translate(-50%, -50%) perspective(2000px) rotate(15deg) scale(1.05);
     box-shadow: inset 20px 0 50px rgba(0, 0, 0, .5), 0 10px 100px rgba(0, 0, 0, .5);
 }
 
@@ -241,9 +241,15 @@ h4 {
     margin-top: 70px;
 }
 
+.card .detail {
+    width: 85%;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
 .card .details p {
     font-size: 15px;
-    line-height: 5px;
+    line-height: 20px;
     transform: rotate(-10deg);
     padding: 0 0 0 20px;
 }
@@ -296,6 +302,14 @@ h4 {
 .snow-cover.blamed {
     background-color: #555;
     color: #ddd;
+}
+
+/* Fix chữ bị chồng trên điện thoại */
+@media (max-width: 480px) {
+    .card .details p {
+        font-size: 13px;     /* nhỏ lại cho fit mobile */
+        line-height: 18px;    
+    }
 }
 
 header.blamed, footer.blamed {
