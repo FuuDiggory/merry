@@ -91,6 +91,16 @@ body {
     transform: translateY(4px); 
 }
 
+/* Fix chữ bị chồng trên điện thoại */
+@media (max-width: 480px) {
+    .christmas-message {
+        font-size: 32px;     /* nhỏ lại cho fit mobile */
+        line-height: 1.2;    /* giãn dòng tránh dính chữ */
+        width: 90%;          /* cho phép tự xuống dòng */
+        white-space: normal; /* bắt buộc xuống dòng */
+        top: 10px;           /* hạ vị trí cho cân đối */
+    }
+}
 
 @media (max-width: 600px) {
     #showButton {
